@@ -2,6 +2,13 @@
 
 This README file will document everything implemented in my Rails Online Shop application.
 
+### Mockups
+<img src='./mockup.jpg'>
+
+### Schema
+<img src='./mockup.jpg'>
+
+
 ### User Stories
 * A user can register, sign in, and sign out.
   * User profile will contain Name, Age, and an array containing shopping cart items.
