@@ -8,7 +8,6 @@ This README file will document everything implemented in my Rails Online Shop ap
 ### Schema
 <img src='./schema.png' alt="schema" width="400" height="500">
 
-
 ### User Stories
 * A user can register, sign in, and sign out.
   * User profile will contain Name, Age, and an array containing shopping cart items.
