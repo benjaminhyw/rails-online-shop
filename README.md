@@ -3,10 +3,10 @@
 This README file will document everything implemented in my Rails Online Shop application.
 
 ### Mockups
-<img src='./mockup.jpg'>
+<img src='./mockup.jpg' alt="mock ups" width="400" height="500">
 
 ### Schema
-<img src='./schema.jpg'>
+<img src='./schema.png' alt="schema" width="400" height="500">
 
 
 ### User Stories
