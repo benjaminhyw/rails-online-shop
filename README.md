@@ -6,7 +6,7 @@ This README file will document everything implemented in my Rails Online Shop ap
 <img src='./mockup.jpg'>
 
 ### Schema
-<img src='./mockup.jpg'>
+<img src='./schema.jpg'>
 
 
 ### User Stories
