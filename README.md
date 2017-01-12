@@ -3,11 +3,10 @@
 This README file will document everything implemented in my Rails Online Shop application.
 
 ### Mockups
-<img src='./mockup.jpg' alt="mock ups" width="400" height="500">
+<img src='./mockup.jpg' alt="mock ups" width="700" height="600">
 
 ### Schema
-<img src='./schema.png' alt="schema" width="400" height="500">
-
+<img src='./schema.png' alt="schema" width="700" height="600">
 
 ### User Stories
 * A user can register, sign in, and sign out.
