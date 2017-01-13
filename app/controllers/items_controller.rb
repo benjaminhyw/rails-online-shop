@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    item_params = params.require(:item).permit(:name, :description, :image, :price, :quantity )
+    item_params
     @item = Item.new(item_params)
     @item.save
 
@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    item_params = params.require(:item).permit(:name, :description, :image, :price, :quantity )
+    item_params
     find_item
     @item.update(item_params)
 
@@ -41,5 +41,9 @@ class ItemsController < ApplicationController
   private
     def find_item
       @item = Item.find(params[:id])
+    end
+
+    def item_params
+      params.require(:item).permit(:name, :description, :image, :price, :quantity )
     end
 end
