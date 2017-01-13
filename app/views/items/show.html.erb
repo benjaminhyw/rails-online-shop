@@ -1,9 +1,9 @@
 <h2><%= @item.name %></h2>
 
 <% if !@item.image.blank? %>
-  <img src="<%= @item.image %>">
+  <img src="<%= @item.image %>" width="500" height="400">
 <% else %>
-  IMAGE NOT AVAILABLE
+  <img src="https://static.orpi.com/image-not-found.png" width="450" height="400">
 <%end%>
 
 <ul>
