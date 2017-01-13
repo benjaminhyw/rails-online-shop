@@ -6,7 +6,6 @@ one:
   image: MyString
   quantity: 1
   price: 1.5
-  timestamp: 2017-01-12 18:15:36
 
 two:
   name: MyString
@@ -14,4 +13,3 @@ two:
   image: MyString
   quantity: 1
   price: 1.5
-  timestamp: 2017-01-12 18:15:36
