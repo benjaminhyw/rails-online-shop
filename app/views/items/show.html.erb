@@ -1,5 +1,6 @@
 <h2><%= @item.name %></h2> 
-<p><%= link_to 'Edit Item', edit_item_path %></p>
+<p><%= link_to 'Edit Item', edit_item_path %> | <%= link_to 'Delete Item', @item, method: :delete %> </p>
+
 
 <% if !@item.image.blank? %>
   <img src="<%= @item.image %>" width="500" height="400">
