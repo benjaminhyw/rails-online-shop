@@ -1,6 +1,6 @@
 <h2><%= @item.name %></h2>
 
-<% if !@item.image.empty? %>
+<% if !@item.image.blank? %>
   <img src="<%= @item.image %>">
 <% else %>
   IMAGE NOT AVAILABLE
