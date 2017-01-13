@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   post '/items', to: 'items#create'
   get '/items/:id', to: 'items#show', as: 'item'
   get '/items/:id/edit', to: 'items#edit'
+  patch '/items/:id', to: 'items#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
