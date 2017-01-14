@@ -23,7 +23,19 @@ This README file will document everything implemented in my Rails Online Shop ap
 
 ### MVP Iteration 1
 * A user can manage products on site.
-  * Ability to create, view, edit, and delete.
+  * Ability to create, view, edit, and delete. :heavy_check_mark:
 * A user can see a basic styled site.
 * A user can see product placeholders.
 
+### MVP Iteration 2
+* Each stock item has a stock quantity and a price.
+* Prices should be displayed in legit format $99.95
+* Have an admin view for inventory management located at /admin.
+  * Use http_basic_authenticate_with_name.
+  * Username should be 'admin', and password should be 'secret'.
+  * Have this protection so that only the admin user can modify inventory, and no one else.
+* UX for inventory should be tabular, very functional, and designed to help the merchant move through lots of data quickly.
+* UX for the shopper's view should be visual, maybe a grid of product images, should encourage spending time and slow browsing.
+  *  Edit/Delete/etc. links should not be visible to a regular user.
+* Have a responsive layout and make it mobile friendly.
+* Include flash error and success messages
