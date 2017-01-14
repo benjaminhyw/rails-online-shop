@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'items#index'
   get '/users', to: 'users#index'
   get '/users/new', to: 'users#new', as: 'new_user'
+  post '/users', to: 'users#create'
 
   get '/items', to: 'items#index'
   get '/items/new', to: 'items#new', as: 'new_item'
