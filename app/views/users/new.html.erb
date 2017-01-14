@@ -1,1 +1,22 @@
 This is where your form for creating new users will go.
+
+<%= form_for(@user) do |f| %>
+  <div>
+    <%= f.label :username %>:
+    <%= f.text_field :username %>
+  </div>
+
+  <div>
+    <%= f.label :email %>:
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :password %>:
+    <%= f.text_field :password %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
