@@ -7,10 +7,24 @@ class UsersController < ApplicationController
     user_params
     @user = User.new(user_params)
     @user.save
+
+    redirect_to @user
   end
 
   def show
     find_user
+  end
+
+  def edit
+    find_user
+  end
+
+  def update
+    user_params
+    find_user
+    @user.update(user_params)
+
+    redirect_to @user
   end
 
   private
