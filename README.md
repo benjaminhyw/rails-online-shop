@@ -22,13 +22,13 @@ This README file will document everything implemented in my Rails Online Shop ap
   * A successful checkout will update item quantity in stock.
 
 ### MVP Iteration 1
-* A user can manage products on site.
+* A user can manage products on site. :heavy_check_mark:
   * Ability to create, view, edit, and delete. :heavy_check_mark:
 * A user can see a basic styled site.
-* A user can see product placeholders.
+* A user can see product placeholders. 
 
 ### MVP Iteration 2
-* Each stock item has a stock quantity and a price.
+* Each stock item has a stock quantity and a price. :heavy_check_mark:
 * Prices should be displayed in legit format $99.95
 * Have an admin view for inventory management located at /admin.
   * Use http_basic_authenticate_with_name.
