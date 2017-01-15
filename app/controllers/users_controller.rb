@@ -15,6 +15,14 @@ class UsersController < ApplicationController
     find_user
   end
 
+  def update
+    user_params
+    find_user
+    @user.update(user_params)
+
+    redirect_to @user
+  end
+
   def show
     find_user
   end
