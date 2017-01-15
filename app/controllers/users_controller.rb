@@ -11,6 +11,10 @@ class UsersController < ApplicationController
     redirect_to @user
   end
 
+  def show
+    find_user
+  end
+
   def edit
     find_user
   end
@@ -21,10 +25,6 @@ class UsersController < ApplicationController
     @user.update(user_params)
 
     redirect_to @user
-  end
-
-  def show
-    find_user
   end
 
   private
