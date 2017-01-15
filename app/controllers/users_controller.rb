@@ -11,6 +11,10 @@ class UsersController < ApplicationController
     redirect_to @user
   end
 
+  def edit
+    find_user
+  end
+
   def show
     find_user
   end
