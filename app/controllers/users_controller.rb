@@ -7,6 +7,8 @@ class UsersController < ApplicationController
     user_params
     @user = User.new(user_params)
     @user.save
+
+    redirect_to @user
   end
 
   def show
