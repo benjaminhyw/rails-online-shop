@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'items#index'
   get '/users', to: 'users#index'
   get '/users/new', to: 'users#new', as: 'new_user'
@@ -7,6 +9,10 @@ Rails.application.routes.draw do
   get '/users/:id/edit', to: 'users#edit', as: 'edit_user'
   patch '/users/:id', to: 'users#update'
   delete '/users/:id', to: 'users#destroy'
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
 
   get '/items', to: 'items#index'
   get '/items/new', to: 'items#new', as: 'new_item'
