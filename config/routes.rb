@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'items#index'
   get '/users', to: 'users#index'
   get '/users/new', to: 'users#new', as: 'new_user'
