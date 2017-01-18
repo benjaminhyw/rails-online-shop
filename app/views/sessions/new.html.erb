@@ -16,3 +16,7 @@
 <% end %>
 
 <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+
+<% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "flash #{key}" %>
+<% end %>
