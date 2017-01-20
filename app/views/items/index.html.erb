@@ -1,4 +1,8 @@
-<%= link_to "REGISTER", new_user_path%> | <%= link_to "LOGIN", login_path %>
+<% if logged_in?%>
+  YOU'RE LOGGED IN
+<% else %>
+  <%= link_to "REGISTER", new_user_path%> | <%= link_to "LOGIN", login_path %>
+<% end %>
 
 <p>This is where all of the available items will be visible.  If you'd like to create a new item, <%= link_to "click here", new_item_path %>.</p>
 
