@@ -6,9 +6,12 @@ class UsersController < ApplicationController
   def create
     user_params
     @user = User.new(user_params)
-    @user.save
-
-    redirect_to @user
+    if @user.save
+      log_in @user
+      redirect_to @user
+    else
+      render 'new'
+    end
   end
 
   def show
