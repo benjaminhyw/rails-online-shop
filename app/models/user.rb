@@ -1,6 +1,6 @@
 require 'bcrypt'
 
 class User < ApplicationRecord
-  # users.password_hash in the database is a :string
+  validates_presence_of :username, :email, :password
   has_secure_password
 end
