@@ -19,6 +19,6 @@
   </div>
 <% end %>
 
-<% @user.errors.each do |error| %>
-  <p><%= flash[:error] = @user.errors[error].first %><p>
+<% @user.errors.each do |error_array, error| %>
+  <p><%= flash[:error] = error %><p>
 <% end %>
