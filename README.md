@@ -9,7 +9,7 @@ This README file will document everything implemented in my Rails Online Shop ap
 <img src='./schema.png' alt="schema" width="700" height="600">
 
 ### User Stories
-* A user can register, sign in, and sign out.
+* A user can register, sign in, and sign out. :heavy_check_mark:
   * User profile will contain Name, Age, and an array containing shopping cart items.
 * A user will receive email confirmation upon signing up.
 * A user can see a list of available items. :heavy_check_mark:
@@ -39,4 +39,4 @@ This README file will document everything implemented in my Rails Online Shop ap
   *  Edit/Delete/etc. links should not be visible to a regular user.
 * Have a responsive layout and make it mobile friendly.
 * Include flash error messages :heavy_check_mark:
-* Include flash error success messages
+* Include flash success messages
