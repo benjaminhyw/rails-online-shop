@@ -19,6 +19,6 @@
   </div>
 <% end %>
 
-<% flash.each do |key, value| %>
-  <%= content_tag :div, value, class: "flash #{key}" %>
+<% @user.errors.each do |error| %>
+  <p><%= flash[:error] = @user.errors[error].first %><p>
 <% end %>
