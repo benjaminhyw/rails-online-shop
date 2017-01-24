@@ -6,7 +6,8 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   # end
 
   test "should get new item form page" do
-    get new_item_path
+    get new_item_url
     assert_response :success
+    assert_select "title", "RailsOnlineShop"
   end
 end
