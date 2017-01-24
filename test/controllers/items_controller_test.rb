@@ -9,6 +9,11 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
     @base_title = "RailsOnlineShop"
   end
 
+  test "should get root" do
+    get root_url
+    assert_response :success
+  end
+
   test "should get new item form page" do
     get new_item_url
     assert_response :success
