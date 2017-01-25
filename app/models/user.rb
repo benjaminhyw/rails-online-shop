@@ -7,4 +7,9 @@ class User < ApplicationRecord
   validates :password, presence: { message: "Password field can't be left blank" }, length: { in: 4..10, message: "Password must be between 4-15 characters in length" }
 
   has_secure_password validations: false
+
+  # Returns a random token
+  def User.new_token
+    SecureRandom.urlsafe_base64
+  end
 end
