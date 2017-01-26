@@ -4,16 +4,24 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @item = Item.new
+    if current_user && current_user.admin
+      @item = Item.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
-    item_params
-    @item = Item.new(item_params)
-    if @item.save
-      redirect_to @item
+    if current_user && current_user.admin
+      item_params
+      @item = Item.new(item_params)
+      if @item.save
+        redirect_to @item
+      else
+        render 'new'
+      end
     else
-      render 'new'
+      redirect_to root_path
     end
   end
 
@@ -25,22 +33,34 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    find_item
+    if current_user && current_user.admin
+      find_item
+    else
+      redirect_to item_path
+    end
   end
 
   def update
-    item_params
-    find_item
-    @item.update(item_params)
+    if current_user && current_user.admin
+      item_params
+      find_item
+      @item.update(item_params)
 
-    redirect_to @item
+      redirect_to @item
+    else
+      redirect_to item_path
+    end
   end
 
   def destroy
-    find_item
-    @item.destroy
+    if current_user && current_user.admin
+      find_item
+      @item.destroy
 
-    redirect_to root_path
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
   end
 
   private
