@@ -19,6 +19,9 @@ class ItemsController < ApplicationController
 
   def show
     find_item
+    if !@item
+      redirect_to root_path
+    end
   end
 
   def edit
