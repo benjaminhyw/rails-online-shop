@@ -19,6 +19,9 @@ class ItemsController < ApplicationController
 
   def show
     find_item
+    if !@item
+      redirect_to root_path
+    end
   end
 
   def edit
@@ -37,12 +40,12 @@ class ItemsController < ApplicationController
     find_item
     @item.destroy
 
-    redirect_to items_path
+    redirect_to root_path
   end
 
   private
     def find_item
-      @item = Item.find(params[:id])
+      @item = Item.find_by_id(params[:id])
     end
 
     def item_params

@@ -16,6 +16,9 @@ class UsersController < ApplicationController
 
   def show
     find_user
+    if (current_user != @user) || !@user
+      redirect_to root_path
+    end
   end
 
   def edit
@@ -34,12 +37,12 @@ class UsersController < ApplicationController
     find_user
     @user.destroy
 
-    redirect_to items_path
+    redirect_to root_path
   end
 
   private
     def find_user
-      @user = User.find(params[:id])
+      @user = User.find_by_id(params[:id])
     end
 
     def user_params
