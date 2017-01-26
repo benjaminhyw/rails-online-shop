@@ -53,10 +53,14 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    find_item
-    @item.destroy
+    if current_user && current_user.admin
+      find_item
+      @item.destroy
 
-    redirect_to root_path
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
   end
 
   private
