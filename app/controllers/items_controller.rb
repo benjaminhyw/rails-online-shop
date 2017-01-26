@@ -33,7 +33,11 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    find_item
+    if current_user && current_user.admin
+      find_item
+    else
+      redirect_to root_path
+    end
   end
 
   def update
