@@ -12,12 +12,16 @@ class ItemsController < ApplicationController
   end
 
   def create
-    item_params
-    @item = Item.new(item_params)
-    if @item.save
-      redirect_to @item
+    if current_user && current_user.admin
+      item_params
+      @item = Item.new(item_params)
+      if @item.save
+        redirect_to @item
+      else
+        render 'new'
+      end
     else
-      render 'new'
+      redirect_to root_path
     end
   end
 
