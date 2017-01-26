@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   def show
     find_user
-    if (current_user != @user) || @user.blank?
+    if (current_user != @user) || !@user
       redirect_to root_path
     end
   end
