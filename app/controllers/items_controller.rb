@@ -42,7 +42,7 @@ class ItemsController < ApplicationController
 
   private
     def find_item
-      @item = Item.find(params[:id])
+      @item = Item.find_by_id(params[:id])
     end
 
     def item_params
