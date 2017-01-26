@@ -1,6 +1,8 @@
 <h2><%= @item.name %></h2> 
-<p><%= link_to 'Edit Item', edit_item_path %> | <%= link_to 'Delete Item', @item, method: :delete %> </p>
 
+<% if current_user && current_user.admin %>
+  <p><%= link_to 'Edit Item', edit_item_path %> | <%= link_to 'Delete Item', @item, method: :delete %> </p>
+<% end %>
 
 <% if !@item.image.blank? %>
   <img src="<%= @item.image %>" width="500" height="400">
