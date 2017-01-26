@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
     if current_user && current_user.admin
       find_item
     else
-      redirect_to root_path
+      redirect_to item_path
     end
   end
 
@@ -48,7 +48,7 @@ class ItemsController < ApplicationController
 
       redirect_to @item
     else
-      redirect_to root_path
+      redirect_to item_path
     end
   end
 
