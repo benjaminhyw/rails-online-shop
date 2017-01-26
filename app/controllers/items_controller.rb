@@ -41,11 +41,15 @@ class ItemsController < ApplicationController
   end
 
   def update
-    item_params
-    find_item
-    @item.update(item_params)
+    if current_user && current_user.admin
+      item_params
+      find_item
+      @item.update(item_params)
 
-    redirect_to @item
+      redirect_to @item
+    else
+      redirect_to root_path
+    end
   end
 
   def destroy
