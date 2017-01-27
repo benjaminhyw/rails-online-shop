@@ -8,7 +8,11 @@ class SessionsController < ApplicationController
       #Log the user in and redirect to the user's show page (for now)
       log_in user
       remember user
-      redirect_to user_path(user)
+      if user.admin
+        redirect_to admin_path
+      else
+        redirect_to user_path(user)
+      end
     else
       flash.now[:danger] = 'Invalid username/password combination'
       render 'new'
