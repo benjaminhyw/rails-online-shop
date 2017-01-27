@@ -1,6 +1,4 @@
-<% if current_user && current_user.admin %>
-  <p>This is where all of the available items will be visible.  If you'd like to create a new item, <%= link_to "click here", new_item_path %>.</p>
-<% end %>
+<p>Check out all of our available items!</p>
 
 
 <% @items.each do |item| %>
