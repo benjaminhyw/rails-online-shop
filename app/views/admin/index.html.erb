@@ -1,4 +1,4 @@
-<% if current_user && current_user.admin %>
+<% if is_admin? %>
   <p>This is the admin index page.  If you'd like to create a new item, <%= link_to "click here", new_item_path %>.</p>
 <% end %>
 

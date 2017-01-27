@@ -9,7 +9,7 @@
   </head>
 
   <body>
-  <% if logged_in? && current_user.admin %>
+  <% if is_admin? %>
     <%= link_to "HOME", root_path %> | <%= link_to "ADMIN", admin_path %> | <%= link_to "PROFILE", current_user %> | <%= link_to "LOGOUT", logout_path, method: :delete %>
   <% elsif logged_in?%>
     <%= link_to "HOME", root_path %> | <%= link_to "PROFILE", current_user %> | <%= link_to "LOGOUT", logout_path, method: :delete %>

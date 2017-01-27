@@ -1,6 +1,6 @@
 <h2><%= @item.name %></h2> 
 
-<% if current_user && current_user.admin %>
+<% if is_admin? %>
   <p><%= link_to 'Edit Item', edit_item_path %> | <%= link_to 'Delete Item', @item, method: :delete %> </p>
 <% end %>
 

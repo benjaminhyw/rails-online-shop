@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-    if current_user && current_user.admin
+    if is_admin?
       @item = Item.new
     else
       redirect_to root_path
@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    if current_user && current_user.admin
+    if is_admin?
       item_params
       @item = Item.new(item_params)
       if @item.save
@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    if current_user && current_user.admin
+    if is_admin?
       find_item
     else
       redirect_to item_path
@@ -41,7 +41,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    if current_user && current_user.admin
+    if is_admin?
       item_params
       find_item
       @item.update(item_params)
@@ -53,7 +53,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    if current_user && current_user.admin
+    if is_admin?
       find_item
       @item.destroy
 
