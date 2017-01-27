@@ -1,4 +1,6 @@
-This is the admin index page.
+<% if current_user && current_user.admin %>
+  <p>This is the admin index page.  If you'd like to create a new item, <%= link_to "click here", new_item_path %>.</p>
+<% end %>
 
 <% @items.each do |item| %>
   <p><%= link_to item.name, item_path(item) %></p>
