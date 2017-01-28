@@ -16,8 +16,8 @@ This README file will document everything implemented in my Rails Online Shop ap
 * A user can click on individual items to see more information. :heavy_check_mark:
 * A user can add items to shopping cart from show page.
 * A user can only be given Admin status from another Admin.
-* Admin users can modify inventory through a special page available only to Admin users. 
-  * Admin users have the ability to Create new items, Read items, Update items, and Delete items.
+* Admin users can modify inventory through a special page available only to Admin users. :heavy_check_mark:
+  * Admin users have the ability to Create new items, Read items, Update items, and Delete items. :heavy_check_mark:
 * A user can checkout items in shopping cart.
   * A successful checkout will update item quantity in stock.
 
@@ -25,18 +25,18 @@ This README file will document everything implemented in my Rails Online Shop ap
 * A user can manage products on site. :heavy_check_mark:
   * Ability to create, view, edit, and delete. :heavy_check_mark:
 * A user can see a basic styled site.
-* A user can see product placeholders. 
+* A user can see product placeholders. :heavy_check_mark:
 
 ### MVP Iteration 2
 * Each stock item has a stock quantity and a price. :heavy_check_mark:
 * Prices should be displayed in legit format $99.95
-* Have an admin view for inventory management located at /admin.
+* Have an admin view for inventory management located at /admin. :heavy_check_mark:
   * Use http_basic_authenticate_with_name.
   * Username should be 'admin', and password should be 'secret'.
   * Have this protection so that only the admin user can modify inventory, and no one else.
 * UX for inventory should be tabular, very functional, and designed to help the merchant move through lots of data quickly.
 * UX for the shopper's view should be visual, maybe a grid of product images, should encourage spending time and slow browsing.
-  *  Edit/Delete/etc. links should not be visible to a regular user.
+  *  Edit/Delete/etc. links should not be visible to a regular user. :heavy_check_mark:
 * Have a responsive layout and make it mobile friendly.
 * Include flash error messages :heavy_check_mark:
 * Include flash success messages
