@@ -16,7 +16,7 @@
 
 #nav{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
   width: 25%;
   float: right;
