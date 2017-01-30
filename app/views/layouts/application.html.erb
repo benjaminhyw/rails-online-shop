@@ -10,11 +10,11 @@
 
   <body>
   <% if is_admin? %>
-    <%= link_to "HOME", root_path %> | <%= link_to "ADMIN", admin_path %> | <%= link_to "PROFILE", current_user %> | <%= link_to "LOGOUT", logout_path, method: :delete %>
+    <nav id="nav"><%= link_to "HOME", root_path %> | <%= link_to "ADMIN", admin_path %> | <%= link_to "PROFILE", current_user %> | <%= link_to "LOGOUT", logout_path, method: :delete %></nav>
   <% elsif logged_in?%>
-    <%= link_to "HOME", root_path %> | <%= link_to "PROFILE", current_user %> | <%= link_to "LOGOUT", logout_path, method: :delete %>
+    <nav id="nav"><%= link_to "HOME", root_path %> | <%= link_to "PROFILE", current_user %> | <%= link_to "LOGOUT", logout_path, method: :delete %></nav>
   <% else %>
-    <%= link_to "HOME", root_path %> | <%= link_to "REGISTER", new_user_path %> | <%= link_to "LOGIN", login_path %>
+    <nav id="nav"><%= link_to "HOME", root_path %> | <%= link_to "REGISTER", new_user_path %> | <%= link_to "LOGIN", login_path %></nav>
   <% end %>
     <%= yield %>
   </body>

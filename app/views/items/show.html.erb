@@ -1,17 +1,19 @@
-<h2><%= @item.name %></h2> 
+<div class="item-show">
+  <div class="individual-item">
+    <h2><%= @item.name %></h2> 
+    <% if is_admin? %>
+      <p><%= link_to 'Edit Item', edit_item_path %> | <%= link_to 'Delete Item', @item, method: :delete %> </p>
+    <% end %>
 
-<% if is_admin? %>
-  <p><%= link_to 'Edit Item', edit_item_path %> | <%= link_to 'Delete Item', @item, method: :delete %> </p>
-<% end %>
-
-<% if !@item.image.blank? %>
-  <img src="<%= @item.image %>" width="500" height="400">
-<% else %>
-  <img src="https://static.orpi.com/image-not-found.png" width="450" height="400">
-<%end%>
-
-<ul>
-  <li>Description: <%= @item.description %></li>
-  <li>Quantity: <%= @item.quantity %></li>
-  <li>Price: <%= @item.price %></li>
-</ul>
+    <% if !@item.image.blank? %>
+      <img src="<%= @item.image %>" width="500" height="400">
+    <% else %>
+      <img src="https://static.orpi.com/image-not-found.png" width="450" height="400">
+    <%end%>
+  </div>
+  <ul id="description">
+    <li>Description: <%= @item.description %></li>
+    <li>Quantity: <%= @item.quantity %></li>
+    <li>Price: <%= @item.price %></li>
+  </ul>
+</div>

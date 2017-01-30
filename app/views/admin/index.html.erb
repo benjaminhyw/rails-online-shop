@@ -1,10 +1,18 @@
 <% if is_admin? %>
-  <p>This is the admin index page.  If you'd like to create a new item, <%= link_to "click here", new_item_path %>.</p>
-<% end %>
+  <div class="item-container">
+    <span class="page-header">
+      <h1>Admin Item View</h1>
 
-<% @items.each do |item| %>
-  <p><%= link_to item.name, item_path(item) %></p>
-  <p><%= link_to 'Edit Item', edit_item_path(item) %> | <%= link_to 'Delete Item', item_path(item), method: :delete %></p>
-  <img src="<%= item.image %>" height="100" width="100">
-  <!-- <%= link_to image_tag(item.image), item_path(item) %> -->
+      <p><%= link_to "CREATE NEW ITEM", new_item_path %></p>
+    </span>
+
+    <% @items.each do |item| %>
+      <div class="individual-item">
+        <p><%= link_to item.name, item_path(item) %></p>
+        <p><%= link_to 'Edit Item', edit_item_path(item) %> | <%= link_to 'Delete Item', item_path(item), method: :delete %></p>
+        <img src="<%= item.image %>" height="100" width="100">
+        <!-- <%= link_to image_tag(item.image), item_path(item) %> -->
+      </div>
+    <% end %>
+  </div>
 <% end %>
