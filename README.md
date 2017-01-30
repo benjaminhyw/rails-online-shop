@@ -21,7 +21,7 @@ This README file will document everything implemented in my Rails Online Shop ap
 * A user can checkout items in shopping cart.
   * A successful checkout will update item quantity in stock.
 
-### MVP Iteration 1
+### MVP Iteration 1 :heavy_check_mark:
 * A user can manage products on site. :heavy_check_mark:
   * Ability to create, view, edit, and delete. :heavy_check_mark:
 * A user can see a basic styled site. :heavy_check_mark:
