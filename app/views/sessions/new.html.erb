@@ -1,22 +1,24 @@
-<h1>Login</h1>
-<%= form_for(:session, url: login_path) do |f| %>
-  <div>
-    <%= f.label :username %>:
-    <%= f.text_field :username %>
-  </div>
+<div class="form">
+  <h1>Login</h1>
+  <%= form_for(:session, url: login_path) do |f| %>
+    <div>
+      <%= f.label :username %>:
+      <%= f.text_field :username %>
+    </div>
 
-  <div>
-    <%= f.label :password %>:
-    <%= f.password_field :password %>
-  </div>
+    <div>
+      <%= f.label :password %>:
+      <%= f.password_field :password %>
+    </div>
 
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
 
-<p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+  <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
 
-<% flash.each do |key, value| %>
-  <%= content_tag :div, value, class: "flash #{key}" %>
-<% end %>
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "flash #{key}" %>
+  <% end %>
+</div>
