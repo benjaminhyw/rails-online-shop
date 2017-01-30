@@ -1,7 +1,9 @@
 <div class='form-container'>
-  <h2>Register New User</h2>
+  <div class="individual-form">
+    <h2>Register New User</h2>
 
-  <%= render 'form', item: @user %>
+    <%= render 'form', item: @user %>
 
-  <p>Already have a profile?  <%= link_to 'Login here!', login_path%></p>
+    <p>Already have a profile?  <%= link_to 'Login here!', login_path%></p>
+  </div>
 </div>
