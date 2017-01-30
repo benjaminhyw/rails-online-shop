@@ -13,5 +13,22 @@
 }
 
 .individual-item{
+  display: flex;
+  flex-direction: column;
   
+}
+
+.item-show{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 90%;
+}
+
+#description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
