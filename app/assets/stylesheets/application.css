@@ -16,13 +16,16 @@
 
 body, html{
   height: 100%;
+  width: 100%;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #nav{
   display: flex;
+  align-self: flex-start;
+  margin-left: auto;
   justify-content: space-around;
-  flex-direction: row;
-  width: 25%;
-  float: right;
+  width: 30%;
 }
