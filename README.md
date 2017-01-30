@@ -24,7 +24,7 @@ This README file will document everything implemented in my Rails Online Shop ap
 ### MVP Iteration 1
 * A user can manage products on site. :heavy_check_mark:
   * Ability to create, view, edit, and delete. :heavy_check_mark:
-* A user can see a basic styled site.
+* A user can see a basic styled site. :heavy_check_mark:
 * A user can see product placeholders. :heavy_check_mark:
 
 ### MVP Iteration 2
