@@ -34,6 +34,10 @@ body, html{
   height: 10%;
 }
 
+.active { 
+  background-color: black;
+}
+
 .form-container{
   display: flex;
   justify-content: center;
