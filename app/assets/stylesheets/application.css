@@ -32,6 +32,11 @@ body, html{
   right: 0;
   width: 100%;
   height: 10%;
+  transition: background-color .30s ease;
+}
+
+.active { 
+  background-color: black;
 }
 
 .form-container{
