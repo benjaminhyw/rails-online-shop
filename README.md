@@ -29,9 +29,9 @@ This README file will document everything implemented in my Rails Online Shop ap
 
 ### MVP Iteration 2
 * Each stock item has a stock quantity and a price. :heavy_check_mark:
-* Prices should be displayed in legit format $99.95
+* Prices should be displayed in legit format $99.95 :heavy_check_mark:
 * Have an admin view for inventory management located at /admin. :heavy_check_mark:
-  * Username should be 'admin', and password should be 'secret'.
+  * Username should be 'admin', and password should be 'secret'. :heavy_check_mark:
   * Have this protection so that only the admin user can modify inventory, and no one else. :heavy_check_mark:
 * UX for inventory should be tabular, very functional, and designed to help the merchant move through lots of data quickly.
 * UX for the shopper's view should be visual, maybe a grid of product images, should encourage spending time and slow browsing.
@@ -51,4 +51,4 @@ This README file will document everything implemented in my Rails Online Shop ap
   * Product show page should show what categories it belongs to.
 * Have tests for all features up to this point
 * Have a session based authentication / authorization. :heavy_check_mark:
-* Build an ActionMailer adapter that wull send a welcome email when the user signs up.
+* Build an ActionMailer adapter that will send a welcome email when the user signs up.
