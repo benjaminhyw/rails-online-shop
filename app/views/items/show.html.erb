@@ -14,6 +14,6 @@
   <ul id="description">
     <li>Description: <%= @item.description %></li>
     <li>Quantity: <%= @item.quantity %></li>
-    <li>Price: <%= @item.price %></li>
+    <li>Price: <%= number_to_currency(@item.price)  %></li>
   </ul>
 </div>
