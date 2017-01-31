@@ -3,12 +3,12 @@
     <span class="page-header">
       <h1>Admin Item View</h1>
 
-      <p><%= link_to "CREATE NEW ITEM", new_item_path %></p>
+      <%= link_to "CREATE NEW ITEM", new_item_path %></p>
     </span>
 
     <% @items.each do |item| %>
       <div class="individual-item">
-        <p><%= link_to item.name, item_path(item) %></p>
+        <%= link_to item.name, item_path(item) %>
         <p><%= link_to 'Edit Item', edit_item_path(item) %> | <%= link_to 'Delete Item', item_path(item), method: :delete %></p>
         <img src="<%= item.image %>" height="100" width="100">
         <!-- <%= link_to image_tag(item.image), item_path(item) %> -->
