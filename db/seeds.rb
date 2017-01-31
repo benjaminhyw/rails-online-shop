@@ -15,3 +15,23 @@
     price: Faker::Commerce.price
   })
 end
+
+User.create({
+  username: "admin",
+  email: "admin@gmail.com",
+  password: "secret",
+  admin: true
+})
+
+User.create({
+  username: "benj",
+  email: "benj@gmail.com",
+  password: "1234",
+  admin: true
+})
+
+User.create({
+  username: "mochi",
+  email: "mochi@gmail.com",
+  password: "1234"
+})
