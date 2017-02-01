@@ -26,6 +26,11 @@ Rails.application.routes.draw do
 
   get '/categories', to: 'categories#index'
   get '/categories/new', to: 'categories#new', as: 'new_category'
+  post '/categories', to: 'categories#create'
+  get '/categories/:id', to: 'categories#show', as: 'category'
+  get '/categories/:id/edit', to: 'categories#edit', as: 'edit_category'
+  patch '/categories/:id', to: 'categories#update'
+  delete '/categories/:id', to: 'categories#destroy'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
