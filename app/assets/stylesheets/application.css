@@ -39,6 +39,13 @@ body, html{
   background-color: black;
 }
 
+.nav-links{
+  display: flex;
+  list-style: none;
+  width: 27.5%;
+  justify-content: space-around;
+}
+
 .form-container{
   display: flex;
   justify-content: center;
