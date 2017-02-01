@@ -10,7 +10,16 @@
 
   <body>
   <% if is_admin? %>
-    <nav id="nav"><%= link_to "HOME", root_path %> | <%= link_to "ADMIN", admin_path %> | <%= link_to "PROFILE", current_user %> | <%= link_to "LOGOUT", logout_path, method: :delete %></nav>
+    <div id="nav-container">
+      <nav id="nav">
+        <ul class="nav-links">
+          <li><%= link_to "HOME", root_path %></li>
+          <li><%= link_to "ADMIN", admin_path %></li>
+          <li><%= link_to "PROFILE", current_user %></li>
+          <li><%= link_to "LOGOUT", logout_path, method: :delete %></li>
+        </ul>
+      </nav>
+    </div>
   <% elsif logged_in?%>
     <nav id="nav"><%= link_to "HOME", root_path %> | <%= link_to "PROFILE", current_user %> | <%= link_to "LOGOUT", logout_path, method: :delete %></nav>
   <% else %>
