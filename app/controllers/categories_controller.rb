@@ -4,7 +4,11 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @category = Category.new
+    if is_admin?
+      @category = Category.new
+    else
+      redirect_to root_path
+    end
   end
 
 end
