@@ -1,0 +1,14 @@
+<%= form_for(category) do |f| %>
+  <div>
+    <%= f.label :name %>:
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<% @category.errors.each do |error_array, error| %>
+  <p><%= flash[:error] = error %><p>
+<% end %>

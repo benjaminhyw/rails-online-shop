@@ -3,8 +3,15 @@
     <span class="page-header">
       <h1>Admin Item View</h1>
 
-      <%= link_to "CREATE NEW ITEM", new_item_path %></p>
+      <p><%= link_to "CREATE NEW ITEM", new_item_path %> | <%= link_to "CREATE NEW CATEGORY", new_category_path %> </p>
     </span>
+
+    <% @categories.each do |category| %>
+      <div class="individual-item">
+        <p><%= link_to category.name, category_path(category) %></p>
+        <p><%= link_to 'Edit', edit_category_path(category) %> | <%= link_to 'Delete', category_path(category), method: :delete %></p>
+      </div>
+    <% end %>
 
     <% @items.each do |item| %>
       <div class="individual-item">
