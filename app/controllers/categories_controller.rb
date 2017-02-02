@@ -40,4 +40,16 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def update
+    if is_admin?
+      category_params
+      find_category
+      @category.update(category_params)
+
+      redirect_to @category
+    else
+      redirect_to category_path
+    end
+  end
+
 end
