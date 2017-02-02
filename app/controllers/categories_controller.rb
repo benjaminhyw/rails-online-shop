@@ -52,4 +52,14 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def destroy
+    if is_admin?
+      find_category
+      @category.destroy
+
+      redirect_to admin_path
+    else
+      redirect_to root_path
+    end
+  end
 end
