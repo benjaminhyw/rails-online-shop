@@ -3,7 +3,7 @@
     <span class="page-header">
       <h1>Admin Item View</h1>
 
-      <%= link_to "CREATE NEW ITEM", new_item_path %></p>
+      <p><%= link_to "CREATE NEW ITEM", new_item_path %> | <%= link_to "CREATE NEW CATEGORY", new_category_path %> </p>
     </span>
 
     <% @items.each do |item| %>
