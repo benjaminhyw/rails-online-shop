@@ -4,4 +4,6 @@ class Item < ApplicationRecord
   validates :quantity, presence: { message: "Quantity field can't be left blank" }, numericality: { greater_than: 0, message: "Must be an integer greater than 0" }
   # Price validation needs it to be in legit $10.99 value format
   validates :price, presence: { message: "Price field can't be left blank"}
+
+  has_and_belongs_to_many :categories
 end
