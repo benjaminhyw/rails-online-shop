@@ -32,5 +32,12 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def edit
+    if is_admin?
+      find_category
+    else
+      redirect_to item_path
+    end
+  end
 
 end
