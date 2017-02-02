@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
     if is_admin?
       find_category
     else
-      redirect_to item_path
+      redirect_to category_path
     end
   end
 
