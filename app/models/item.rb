@@ -6,4 +6,5 @@ class Item < ApplicationRecord
   validates :price, presence: { message: "Price field can't be left blank"}
 
   has_and_belongs_to_many :categories
+  # serialize :category_id, Array
 end
