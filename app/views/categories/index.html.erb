@@ -1,1 +1,5 @@
 <h2>This is where all categories will be displayed.</h2>
+
+<% @categories.each do |category| %>
+  <p><%= category.name %></p>
+<% end %>
