@@ -35,3 +35,19 @@ User.create({
   email: "mochi@gmail.com",
   password: "1234"
 })
+
+Item.create({
+  name: "Hiking Shoes",
+  description: "Going out on a hike?  Take these!  Waterproof, sturdy, AND comfy!",
+  image: "https://www.rei.com/media/51e99672-0a61-4a37-835c-a6aa46da7eb8", 
+  quantity: 20,
+  price: 100
+})
+
+Category.create({
+  name: "Movies"
+})
+
+Category.create({
+  name: "Shoes"
+})
