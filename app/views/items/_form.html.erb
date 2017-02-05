@@ -25,6 +25,11 @@
   </div>
 
   <div>
+    <%= f.label :category_id %>:
+    <%= f.select(:category_id, [['Movies', 1], ['Shoes', 2]],{ :prompt => "Please select"})  %>
+  </div>
+
+  <div>
     <%= f.submit %>
   </div>
 <% end %>
