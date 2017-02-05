@@ -5,6 +5,6 @@ module ItemsHelper
     end
 
     def item_params
-      params.require(:item).permit(:name, :description, :image, :price, :quantity )
+      params.require(:item).permit(:name, :description, :image, :price, :quantity, :category_id )
     end
 end
