@@ -1,10 +1,21 @@
-<h1><%=@category.name.capitalize%></h1>
+<div class="item-container">
 
-<!--  
-<%=@category.product_id%>
-<% if !@category.product_id.blank? %>
-  <% @category.product_id.each do |product_id|%>
-    <p><%= product_id %></p>
+  <span class="page-header"><h1><%=@category.name.capitalize%></h1></span>
+
+    
+  <% if !@category.item_id.blank? %>
+    <% @category.item_id.each do |item_id|%>
+      <% item = Item.find_by(id: item_id) %>
+
+      <div class="individual-item">
+        <%= link_to item.name, item_path(item) %>
+        <img src="<%= item.image %>" height="100" width="100">
+        <!-- <%= link_to image_tag(item.image), item_path(item) %> -->
+      </div>
+
+
+
+    <% end %>
   <% end %>
-<% end %>
--->
+
+</div>
