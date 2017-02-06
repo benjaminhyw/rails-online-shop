@@ -19,7 +19,7 @@ module CategoriesHelper
     def categorize
       items.each do |item|
         category = Category.find_by_id(item.category_id)
-        if !item.category_id.blank?
+        if !item.category_id.blank? && !category.item_id.include?(item.id)
           category.item_id << item.id
           category.save
         end
