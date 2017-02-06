@@ -7,7 +7,7 @@
     <% @category.item_id.each do |item_id|%>
       <% item = Item.find_by(id: item_id) %>
 
-      <div class="individual-item">
+      <div class="individual-item-index">
         <%= link_to item.name, item_path(item) %>
         <img src="<%= item.image %>" height="100" width="100">
         <!-- <%= link_to image_tag(item.image), item_path(item) %> -->

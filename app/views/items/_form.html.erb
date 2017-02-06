@@ -25,6 +25,17 @@
   </div>
 
   <div>
+    <% @categories_array = [] %>
+    <% categories.each do |category| %>
+      <% @categories_array << [category.name, category.id] %>
+    <% end %>
+
+
+    <%= f.label :category_id %>:
+    <%= f.select(:category_id, @categories_array,{ :prompt => "Please select"})  %>
+  </div>
+
+  <div>
     <%= f.submit %>
   </div>
 <% end %>

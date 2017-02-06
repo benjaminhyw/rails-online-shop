@@ -16,6 +16,7 @@ class ItemsController < ApplicationController
       item_params
       @item = Item.new(item_params)
       if @item.save
+        categorize
         redirect_to @item
       else
         render 'new'
@@ -45,6 +46,7 @@ class ItemsController < ApplicationController
       item_params
       find_item
       @item.update(item_params)
+      categorize
 
       redirect_to @item
     else
