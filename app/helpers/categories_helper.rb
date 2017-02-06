@@ -16,12 +16,20 @@ module CategoriesHelper
       params.require(:category).permit(:name)
     end
 
+    def clean_up
+      categories.each do |category|
+        category.item_id = []
+        category.save
+      end
+    end
+
     def categorize
+      clean_up
       items.each do |item|
-        category = Category.find_by_id(item.category_id)
-        if !item.category_id.blank? && !category.item_id.include?(item.id)
-          category.item_id << item.id
-          category.save
+        new_category = Category.find_by_id(item.category_id)
+        if !item.category_id.blank? && !new_category.item_id.include?(item.id)
+          new_category.item_id << item.id
+          new_category.save
         end
       end
     end
