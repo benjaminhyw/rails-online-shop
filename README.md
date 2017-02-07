@@ -43,11 +43,11 @@ This README file will document everything implemented in my Rails Online Shop ap
 ### MVP Iteration 3
 * User registration / login. :heavy_check_mark:
   * At least one admin user. :heavy_check_mark:
-* Products should have categories.
-  * A product can have many categories.
-  * A category can have many products.
-  * On homepage include link that shows all categories.
-    * When a specific category is clicked, show all items that fall under that category.
+* Products should have categories. :heavy_check_mark:
+  * A product can have many categories. :heavy_check_mark:
+  * A category can have many products. :heavy_check_mark:
+  * On homepage include link that shows all categories. :heavy_check_mark:
+    * When a specific category is clicked, show all items that fall under that category. :heavy_check_mark:
   * Product show page should show what categories it belongs to.
 * Have tests for all features up to this point
 * Have a session based authentication / authorization. :heavy_check_mark:
