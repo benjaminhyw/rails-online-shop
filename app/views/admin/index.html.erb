@@ -6,18 +6,26 @@
       <p><%= link_to "CREATE NEW ITEM", new_item_path %> | <%= link_to "CREATE NEW CATEGORY", new_category_path %> </p>
     </span>
 
-    <% @categories.each do |category| %>
-      <div class="individual-item-index">
-        <p><%= link_to category.name, category_path(category) %></p>
-        <p><%= link_to 'Edit', edit_category_path(category) %> | <%= link_to 'Delete', category_path(category), method: :delete %></p>
-      </div>
-    <% end %>
+    <div class="individual-category-container">
+      <% @categories.each do |category| %>
+        <div class="individual-category">
+        <ul>
+          <li><%= link_to category.name, category_path(category) %></li>
+          <li><%= link_to 'Edit', edit_category_path(category) %> | <%= link_to 'Delete', category_path(category), method: :delete %></li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
 
     <% @items.each do |item| %>
       <div class="individual-item-index">
         <%= link_to item.name, item_path(item) %>
-        <p><%= link_to 'Edit Item', edit_item_path(item) %> | <%= link_to 'Delete Item', item_path(item), method: :delete %></p>
-        <img src="<%= item.image %>" height="100" width="100">
+        <p><%= link_to 'Edit', edit_item_path(item) %> | <%= link_to 'Delete', item_path(item), method: :delete %></p>
+        <% if !item.image.blank? %>
+          <img src="<%= item.image %>" height="100" width="100">
+        <% else %>
+          <img src="https://static.orpi.com/image-not-found.png" width="100" height="100">
+        <%end%>
         <!-- <%= link_to image_tag(item.image), item_path(item) %> -->
       </div>
     <% end %>

@@ -1,3 +1,36 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.individual-category-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.individual-category{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2% 5%;
+  padding: 1%;
+  border: 1px black solid;
+  border-radius: 10%;
+  background-color: rgba(60, 10, 144, .5);
+  width: 10%;
+}
+
+.individual-category ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  height: 100%;
+}
+
+.individual-category ul li{
+  display: flex;
+  justify-content: center;
+}
