@@ -11,7 +11,7 @@ This README file will document everything implemented in my Rails Online Shop ap
 ### User Stories
 * A user can register, sign in, and sign out. :heavy_check_mark:
   * User profile will contain Name, Age, and an array containing shopping cart items.
-* A user will receive email confirmation upon signing up.
+* A user will receive email confirmation upon signing up. :heavy_check_mark:
 * A user can see a list of available items. :heavy_check_mark:
 * A user can click on individual items to see more information. :heavy_check_mark:
 * A user can add items to shopping cart from show page.
@@ -51,4 +51,18 @@ This README file will document everything implemented in my Rails Online Shop ap
   * Product show page should show what categories it belongs to.
 * Have tests for all features up to this point
 * Have a session based authentication / authorization. :heavy_check_mark:
-* Build an ActionMailer adapter that will send a welcome email when the user signs up.
+* Build an ActionMailer adapter that will send a welcome email when the user signs up. :heavy_check_mark:
+
+### MVP Integration 4
+* Each product will have an 'Add to Cart' button
+  * This will load a view through AJAX that shows the shopping cart for that user
+* Users can remove items from the cart.
+* Users can change the quantity of items they want, as long as it doesn't exceed the current stock quantity.
+* Calculate total price of all items in shopping cart the moment cart is updated in any way.
+* A successful checkout will:
+  * Reduce existing item stock quantity accordingly.
+  * Send user email detailing purchase.
+  * Redirect user to thank you page that indicates purchase details.
+* Items out of stock will be indicated as such on item page and have their 'Add to cart' button greyed out.
+* Maintain an "order history" page for each user, where you can see previous order (date of purchase & total spent)
+* Tests
