@@ -46,6 +46,7 @@ class ItemsController < ApplicationController
     if is_admin?
       item_params
       find_item
+      delete_item_from_old_category
       @item.update(item_params)
       categorize
 
