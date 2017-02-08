@@ -52,3 +52,17 @@ Category.create({
 Category.create({
   name: "Shoes"
 })
+Category.create({
+  name: "Shirts"
+})
+
+Category.create({
+  name: "Hats"
+})
+Category.create({
+  name: "Cycling"
+})
+
+Category.create({
+  name: "Books"
+})
