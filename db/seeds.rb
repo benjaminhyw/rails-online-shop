@@ -12,7 +12,8 @@
     description: Faker::StarWars.quote,
     image: Faker::LoremPixel.image,
     quantity: 100,
-    price: Faker::Commerce.price
+    price: Faker::Commerce.price,
+    category_id: rand(1..6)
   })
 end
 
@@ -50,4 +51,18 @@ Category.create({
 
 Category.create({
   name: "Shoes"
+})
+Category.create({
+  name: "Shirts"
+})
+
+Category.create({
+  name: "Hats"
+})
+Category.create({
+  name: "Cycling"
+})
+
+Category.create({
+  name: "Books"
 })
