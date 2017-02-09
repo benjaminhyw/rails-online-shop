@@ -2,9 +2,10 @@
   <div class="individual-user">
     <p>This is where each individual user profile info will go.</p>
 
-    <p><%= link_to "Edit", edit_user_path %> | <%= link_to "Delete", @user, method: :delete %></p>
+    <p><%= link_to "Orders", order_path %></p>
 
     <p> Username: <%= @user.username%></p>
     <p> Email: <%= @user.email%></p>
+    <p><%= link_to "Edit Account", edit_user_path %> | <%= link_to "Delete Account", @user, method: :delete %></p>
   </div>
 </div>
