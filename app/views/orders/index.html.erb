@@ -1,1 +1,9 @@
 This is the index page for orders.
+
+<!-- This code isn't final.  I need to add logic for an order having multiple items, name, etc -->
+<% if  !current_user.orders.blank? %>
+  <% current_user.orders.each do |order| %>
+  <!-- Here you should apply code that will Display the name of the order, clickable link for order details etc -->
+    order.user_id
+  <% end %>
+<% end %>
