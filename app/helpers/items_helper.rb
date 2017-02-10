@@ -13,6 +13,7 @@ module ItemsHelper
     end
 
     def add_to_cart(item)
+      @cart ||= []
       @cart << item
     end
 end
