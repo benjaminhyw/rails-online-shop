@@ -12,6 +12,10 @@
           <img src="https://static.orpi.com/image-not-found.png" width="100" height="100">
         <%end%>
       <!-- <%= link_to image_tag(item.image), item_path(item) %> -->
+
+      <%= link_to "Add To Cart", @item, method: :add_to_cart %>
+
+
     </div>
   <% end %>
 </div>

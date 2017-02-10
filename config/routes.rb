@@ -12,6 +12,14 @@ Rails.application.routes.draw do
   patch '/users/:id', to: 'users#update'
   delete '/users/:id', to: 'users#destroy'
 
+  get '/users/:id/orders', to: 'orders#index', as: 'orders'
+  get '/users/:id/orders/new', to: 'orders#new', as: 'new_order'
+  post '/users/:id/orders', to: 'orders#create'
+  get '/users/:id/orders/:id', to: 'orders#show', as: 'order'
+  get '/users/:id//orders/:id/edit', to: 'orders#edit', as: 'edit_order'
+  patch '/users/:id/orders/:id', to: 'orders#update'
+  delete '/users/:id/orders/:id', to: 'orders#destroy'
+
   get '/login', to: 'sessions#new', as: 'new_session'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
