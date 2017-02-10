@@ -12,8 +12,9 @@ module ItemsHelper
       @cart = []
     end
 
-    def add_to_cart(item)
+    def add_to_cart
+      find_item
       @cart ||= []
-      @cart << item
+      @cart << @item.id
     end
 end
