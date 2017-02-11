@@ -4,7 +4,9 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @order = Order.new
+    if current_user
+      @order = Order.new
+    end
   end
 
   def create
