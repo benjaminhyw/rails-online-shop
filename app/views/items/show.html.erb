@@ -16,4 +16,7 @@
     <li>Quantity: <%= @item.quantity %></li>
     <li>Price: <%= number_to_currency(@item.price)  %></li>
   </ul>
+  <% if logged_in? %>
+    <%= link_to "Add To Cart", new_order_path %>
+  <% end %>
 </div>

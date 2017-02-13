@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   end
 
   def new
-    if current_user
+    if logged_in?
       @order = Order.new
     else
       redirect_to root_path
@@ -13,6 +13,15 @@ class OrdersController < ApplicationController
   end
 
   def create
+    if logged_in?
+      order_params
+      @order = Order.new(order_params)
+      if @order.save
+        redirect_to @order
+      else
+        render 'new'
+      end
+    end
   end
 
   def show
