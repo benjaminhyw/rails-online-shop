@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    empty_cart
     logout
     redirect_to root_path
   end
