@@ -18,7 +18,7 @@ module ItemsHelper
 
     def add_to_cart
       find_item
-      @cart ||= []
+      refresh_cart
       @cart << @item.id
     end
 end
