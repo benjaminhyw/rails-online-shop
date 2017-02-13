@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_secure_password validations: false
   has_many :orders
   serialize :orders
+  has_one :shopping_cart
+  serialize :shopping_cart
 
   # Returns the hash digest of the given string.
   def User.digest(string)
