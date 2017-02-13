@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170209204634) do
+ActiveRecord::Schema.define(version: 20170210213522) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20170209204634) do
     t.string   "password_digest"
     t.string   "remember_digest"
     t.text     "orders",          default: "--- []\n"
+    t.text     "cart",            default: "--- []\n"
   end
 
 end
