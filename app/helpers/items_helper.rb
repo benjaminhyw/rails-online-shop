@@ -19,6 +19,6 @@ module ItemsHelper
     def add_to_cart
       find_item
       refresh_cart
-      @cart << @item.id
+      @cart << @item
     end
 end
