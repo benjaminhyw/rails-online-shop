@@ -7,6 +7,8 @@ class OrdersController < ApplicationController
   def new
     if current_user
       @order = Order.new
+    else
+      redirect_to root_path
     end
   end
 
