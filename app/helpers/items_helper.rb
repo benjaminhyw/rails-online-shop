@@ -12,6 +12,10 @@ module ItemsHelper
       @cart = []
     end
 
+    def refresh_cart
+      @cart ||= []
+    end
+
     def add_to_cart
       find_item
       @cart ||= []
