@@ -1,1 +1,14 @@
-Form partial for orders.
+<%= form_for(order) do |f| %>
+  <div>
+    <%= f.label :quantity %>:
+    <%= f.text_field :quantity %>
+  </div>
+
+  <div>
+    <%= f.button_to "Add To Cart", method: 'add_to_cart' %>
+  </div>
+<% end %>
+
+<% @item.errors.each do |error_array, error| %>
+  <p><%= flash[:error] = error %><p>
+<% end %>
