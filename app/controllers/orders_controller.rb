@@ -1,12 +1,13 @@
 class OrdersController < ApplicationController
   def index
     @orders = Order.all
-    @cart ||= []
+    refresh_cart
   end
 
   def new
     if logged_in?
       @order = Order.new
+      refresh_cart
     else
       redirect_to root_path
     end
@@ -25,6 +26,7 @@ class OrdersController < ApplicationController
   end
 
   def show
+    refresh_cart
   end
 
   def edit
