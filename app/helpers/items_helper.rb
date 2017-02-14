@@ -15,13 +15,4 @@ module ItemsHelper
     def refresh_cart
       @cart ||= []
     end
-
-    def add_to_cart
-      if logged_in?
-        find_item
-        # refresh_cart
-        @current_user.shopping_cart << @item.id
-        # @current_user.save!
-      end
-    end
 end
