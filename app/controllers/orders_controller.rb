@@ -26,7 +26,10 @@ class OrdersController < ApplicationController
   end
 
   def show
-    refresh_cart
+    find_order
+    if !@order
+      redirect_to order_path
+    end
   end
 
   def edit
