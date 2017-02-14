@@ -9,7 +9,7 @@ module ItemsHelper
     end
 
     def empty_cart
-      @cart = []
+      current_user.shopping_cart = []
     end
 
     def refresh_cart
