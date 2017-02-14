@@ -7,5 +7,6 @@
     <p> Username: <%= @user.username%></p>
     <p> Email: <%= @user.email%></p>
     <p><%= link_to "Edit Account", edit_user_path %> | <%= link_to "Delete Account", @user, method: :delete %></p>
+    <p> Cart: <%= @user.shopping_cart%></p>
   </div>
 </div>
