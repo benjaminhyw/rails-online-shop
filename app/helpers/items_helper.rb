@@ -17,8 +17,11 @@ module ItemsHelper
     end
 
     def add_to_cart
-      find_item
-      refresh_cart
-      @cart << @item
+      if logged_in?
+        find_item
+        # refresh_cart
+        @current_user.shopping_cart << @item.id
+        @current_user.save!
+      end
     end
 end

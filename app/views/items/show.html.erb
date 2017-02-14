@@ -17,7 +17,7 @@
     <li>Price: <%= number_to_currency(@item.price)  %></li>
   </ul>
   <% if logged_in? %>
-    <%= button_to "Add To Cart", method:add_to_cart %>
+    <%= button_to "Add To Cart", method: add_to_cart %>
   <% end %>
   <% if @cart %>
   <%= @cart %>
