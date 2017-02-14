@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
     categorize
+    refresh_cart
   end
 
   def new
@@ -29,6 +30,7 @@ class ItemsController < ApplicationController
 
   def show
     find_item
+    refresh_cart
     if !@item
       redirect_to root_path
     end

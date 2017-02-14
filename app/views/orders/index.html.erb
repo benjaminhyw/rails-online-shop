@@ -1,9 +1,13 @@
 This is the index page for orders.
 
-<% if !@cart.blank? %>
-  <p><%= @cart %></p>
+<% current_user %>
+<% if !@current_user.shopping_cart.blank? %>
+  <p><%= @current_user.shopping_cart.each do |item| %></p>
+    <%= item %>
+  <% end %>
 <% else %>
   Can't see cart contents :{
+
 <% end %>
 
 <!-- This code isn't final.  I need to add logic for an order having multiple items, name, etc -->

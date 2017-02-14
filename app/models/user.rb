@@ -9,8 +9,10 @@ class User < ApplicationRecord
   validates :password, presence: { message: "Password field can't be left blank" }, length: { in: 4..10, message: "Password must be between 4-15 characters in length" }
 
   has_secure_password validations: false
-  has_many :orders
+  # has_many :orders
   serialize :orders
+  # has_one :shopping_cart
+  serialize :shopping_cart
 
   # Returns the hash digest of the given string.
   def User.digest(string)
