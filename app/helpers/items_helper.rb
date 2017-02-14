@@ -21,7 +21,7 @@ module ItemsHelper
         find_item
         # refresh_cart
         @current_user.shopping_cart << @item.id
-        @current_user.save!
+        # @current_user.save!
       end
     end
 end
