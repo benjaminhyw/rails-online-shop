@@ -72,9 +72,11 @@ class ItemsController < ApplicationController
   def add_to_cart
     if logged_in?
       find_item
-      # refresh_cart
-      @current_user.shopping_cart << @item.id
-      @current_user.save!
+      if !@current_user.shopping_cart.include?(@item.id)
+        @current_user.shopping_cart << @item.id
+        @current_user.shopping_cart = @current_user.shopping_cart.uniq
+        @current_user.save!
+      end
     end
   end
 end
