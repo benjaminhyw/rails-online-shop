@@ -73,8 +73,8 @@ class ItemsController < ApplicationController
     if logged_in?
       find_item
       @current_cart = @current_user.shopping_cart
-      if !@current_cart.include?(@item.id)
-        @current_cart << @item.id
+      if !@current_cart.include?(@item)
+        @current_cart << @item
         @current_cart = @current_cart.uniq
         @current_user.save!
       end
