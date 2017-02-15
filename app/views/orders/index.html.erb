@@ -1,6 +1,5 @@
-<% current_user %>
-<% if !@current_user.shopping_cart.blank? %>
-  <p><%= @current_user.shopping_cart.each do |item| %></p>
+<% if !current_user.shopping_cart.blank? %>
+  <p><% @current_user.shopping_cart.each do |item| %></p>
     <%= item %>
   <% end %>
 <% else %>
