@@ -1,12 +1,10 @@
-This is the index page for orders.
-
 <% current_user %>
 <% if !@current_user.shopping_cart.blank? %>
   <p><%= @current_user.shopping_cart.each do |item| %></p>
     <%= item %>
   <% end %>
 <% else %>
-  Can't see cart contents :{
+  Shopping Cart is currently empty!  Go add some items!
 
 <% end %>
 
