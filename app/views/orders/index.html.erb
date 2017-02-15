@@ -1,16 +1,21 @@
-<% if !current_user.shopping_cart.blank? %>
-  <p><% @current_user.shopping_cart.each do |item| %></p>
-    <%= item %>
-  <% end %>
-<% else %>
-  Shopping Cart is currently empty!  Go add some items!
+<div class="item-container">
+<span class="page-header"><h1>Shopping Cart</h1></span>
 
-<% end %>
-
-<!-- This code isn't final.  I need to add logic for an order having multiple items, name, etc -->
-<% if  !current_user.orders.blank? %>
-  <% current_user.orders.each do |order| %>
-  <!-- Here you should apply code that will Display the name of the order, clickable link for order details etc -->
-    order.user_id
+  <% if !current_user.shopping_cart.blank? %>
+    <% @current_user.shopping_cart.each do |item| %>
+    <div class="individual-item-index">
+      <p><%= item.name %></p>
+    </div>
+    <% end %>
+  <% else %>
+    Shopping Cart is currently empty!  Go add some items!
   <% end %>
-<% end %>
+
+  <!-- This code isn't final.  I need to add logic for an order having multiple items, name, etc -->
+  <% if  !current_user.orders.blank? %>
+    <% current_user.orders.each do |order| %>
+    <!-- Here you should apply code that will Display the name of the order, clickable link for order details etc -->
+      order.user_id
+    <% end %>
+  <% end %>
+</div>
