@@ -11,15 +11,13 @@
       <img src="https://static.orpi.com/image-not-found.png" width="450" height="400">
     <%end%>
   </div>
+
   <ul id="description">
     <li>Description: <%= @item.description %></li>
     <li>Quantity: <%= @item.quantity %></li>
     <li>Price: <%= number_to_currency(@item.price)  %></li>
   </ul>
   <% if logged_in? %>
-    <%= button_to "Add To Cart", method: add_to_cart %>
-  <% end %>
-  <% if @cart %>
-  <%= @cart %>
+    <%= button_to "Add To Cart",  add_to_cart_path %>
   <% end %>
 </div>
