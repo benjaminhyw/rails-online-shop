@@ -1,16 +1,3 @@
-<div class="item-container">
-<span class="page-header"><h1>Shopping Cart</h1></span>
-
-  <% if !current_user.shopping_cart.blank? %>
-    <% @current_user.shopping_cart.each do |item| %>
-    <div class="individual-item-index">
-      <p><%= item.name %></p>
-    </div>
-    <% end %>
-  <% else %>
-    Shopping Cart is currently empty!  Go add some items!
-  <% end %>
-
   <!-- This code isn't final.  I need to add logic for an order having multiple items, name, etc -->
   <% if  !current_user.orders.blank? %>
     <% current_user.orders.each do |order| %>
@@ -18,4 +5,3 @@
       order.user_id
     <% end %>
   <% end %>
-</div>
