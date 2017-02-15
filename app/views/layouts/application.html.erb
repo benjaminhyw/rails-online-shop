@@ -15,7 +15,7 @@
         <ul class="nav-links">
           <li><%= link_to "HOME", root_path %></li>
           <li><%= link_to "ADMIN", admin_path %></li>
-          <li><%= link_to "CART", orders_path(current_user) %></li>
+          <li><%= link_to "CART", cart_path(current_user) %></li>
           <li><%= link_to "PROFILE", current_user %></li>
           <li><%= link_to "LOGOUT", logout_path, method: :delete %></li>
         </ul>
@@ -26,7 +26,7 @@
       <nav id="nav">
         <ul class="nav-links">
           <li><%= link_to "HOME", root_path %></li>
-          <li><%= link_to "CART", orders_path(current_user) %></li>
+          <li><%= link_to "CART", cart_path(current_user) %></li>
           <li><%= link_to "PROFILE", current_user %></li>
           <li><%= link_to "LOGOUT", logout_path, method: :delete %></li>
         </ul>
