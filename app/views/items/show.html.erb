@@ -16,8 +16,10 @@
     <li>Description: <%= @item.description %></li>
     <li>Quantity: <%= @item.quantity %></li>
     <li>Price: <%= number_to_currency(@item.price)  %></li>
+    <br>
+    <% if logged_in? %>
+      <%= button_to "Add To Cart",  add_to_cart_path %>
+    <% end %>
   </ul>
-  <% if logged_in? %>
-    <%= button_to "Add To Cart",  add_to_cart_path %>
-  <% end %>
+  
 </div>

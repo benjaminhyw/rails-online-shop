@@ -50,5 +50,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%
+  height: 100%;
+  list-style: none;
+  width: 45%;
+}
+
+#description li{
+  margin-right: 5%;
 }
