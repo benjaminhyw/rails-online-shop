@@ -10,6 +10,7 @@ module ItemsHelper
 
     def empty_cart
       current_user.shopping_cart = []
+      current_user.save!
     end
 
     def refresh_cart
