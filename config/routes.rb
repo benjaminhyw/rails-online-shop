@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   delete '/users/:id', to: 'users#destroy'
 
   get '/users/:id/cart', to: 'cart#index', as: 'cart'
-  post '/users/:id/cart', to: 'cart#thank_you', as: 'thank_you'
+  post '/users/:id/cart', to: 'cart#checkout', as: 'checkout'
 
   get '/users/:id/orders', to: 'orders#index', as: 'orders'
   get '/users/:id/orders/new', to: 'orders#new', as: 'new_order'
