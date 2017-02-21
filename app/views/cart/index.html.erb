@@ -14,6 +14,7 @@
         <%end%>
       </div>
     <% end %>
+    <p><%= link_to "Edit Cart", edit_cart_path %></p>
     <%= button_to "Checkout", checkout_path %>
   <% else %>
     Shopping Cart is currently empty!  Go add some items!
