@@ -1,6 +1,6 @@
 <% current_user %>
 <% if  !current_user.orders.blank? %>
   <% current_user.orders.each do |order| %>
-    <p><%= order.item_id %></p>
+    <p><%= order.created_at.strftime("%m/%d/%Y at %I:%M%p") %></p>
   <% end %>
 <% end %>
