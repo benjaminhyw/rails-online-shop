@@ -1,8 +1,6 @@
-  <!-- This code isn't final.  I need to add logic for an order having multiple items, name, etc -->
-  <% current_user %>
-  <% if  !current_user.orders.blank? %>
-    <% current_user.orders.each do |order| %>
-    <!-- Here you should apply code that will Display the name of the order, clickable link for order details etc -->
-      <p><%= order.item_id %></p>
-    <% end %>
+<% current_user %>
+<% if  !current_user.orders.blank? %>
+  <% current_user.orders.each do |order| %>
+    <p><%= order.item_id %></p>
   <% end %>
+<% end %>
