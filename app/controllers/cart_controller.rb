@@ -2,6 +2,14 @@ class CartController < ApplicationController
   def index
   end
 
+  def edit
+    
+  end
+
+  def remove_from_cart
+    redirect_to root_path
+  end
+
   def checkout
     current_user
     @current_cart = @current_user.shopping_cart
