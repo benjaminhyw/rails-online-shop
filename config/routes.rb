@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   get '/users/:id/cart', to: 'cart#index', as: 'cart'
   post '/users/:id/cart', to: 'cart#checkout', as: 'checkout'
+  get '/users/:id/cart/edit', to: 'cart#edit', as: 'edit_cart'
 
   get '/users/:id/orders', to: 'orders#index', as: 'orders'
   get '/users/:id/orders/new', to: 'orders#new', as: 'new_order'
