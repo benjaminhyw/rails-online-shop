@@ -1,1 +1,21 @@
-This is the cart edit page.
+<div class="item-container">
+  <span class="page-header">
+    <h1>Edit Shopping Cart</h1>
+  </span>
+
+  <% if !current_user.shopping_cart.blank? %>
+    <% @current_user.shopping_cart.each do |item| %>
+      <div class="individual-item-index">
+        <%= link_to item.name, item_path(item) %>
+        <% if !item.image.blank? %>
+            <img src="<%= item.image %>" height="100" width="100">
+        <% else %>
+          <img src="https://static.orpi.com/image-not-found.png" width="100" height="100">
+        <%end%>
+        <%= button_to "Remove", remove_from_cart_path %>
+      </div>
+    <% end %>
+  <% else %>
+    Shopping Cart is currently empty!  Go add some items!
+  <% end %>
+</div>
