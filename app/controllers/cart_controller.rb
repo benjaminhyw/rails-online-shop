@@ -15,6 +15,9 @@ class CartController < ApplicationController
 
       @order.save!
 
+      @current_user.orders << @order
+      @current_user.save!
+
       empty_cart
       redirect_to cart_path
     end
