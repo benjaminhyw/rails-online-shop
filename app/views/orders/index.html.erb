@@ -1,6 +1,11 @@
-<% current_user %>
-<% if  !current_user.orders.blank? %>
-  <% current_user.orders.each do |order| %>
-    <p><%= order.created_at.strftime("%m/%d/%Y at %I:%M%p") %></p>
-  <% end %>
-<% end %>
+<div class="item-show">
+  <div class="individual-item-show">
+
+    <% current_user %>
+    <% if  !current_user.orders.blank? %>
+      <% current_user.orders.each do |order| %>
+        <p><div><%= link_to order.created_at.strftime("%m/%d/%Y at %I:%M%p"), order_path(order) %></div></p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
