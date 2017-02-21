@@ -3,7 +3,8 @@ class CartController < ApplicationController
   end
 
   def edit
-    
+    current_user
+    @cart = @current_user.shopping_cart
   end
 
   def remove_from_cart
