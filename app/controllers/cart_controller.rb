@@ -7,9 +7,16 @@ class CartController < ApplicationController
     @cart = @current_user.shopping_cart
   end
 
-  def remove_from_cart
-    redirect_to root_path
-  end
+  # This method is under construction!! Will come back to it.
+  # def remove_from_cart(item)
+  #   if logged_in?
+  #     current_user
+  #     find_item
+  #     @current_cart = @current_user.shopping_cart
+  #     @current_cart.delete(item)
+  #     @current_user.save!
+  #   end
+  # end
 
   def checkout
     current_user
