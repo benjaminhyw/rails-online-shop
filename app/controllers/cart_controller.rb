@@ -7,16 +7,16 @@ class CartController < ApplicationController
     @cart = @current_user.shopping_cart
   end
 
-  # This method is under construction!! Will come back to it.
-  # def remove_from_cart(item)
-  #   if logged_in?
-  #     current_user
-  #     find_item
-  #     @current_cart = @current_user.shopping_cart
-  #     @current_cart.delete(item)
-  #     @current_user.save!
-  #   end
-  # end
+  def remove_from_cart
+    if logged_in?
+      current_user
+      @item = Item.find_by_id(params[:item_id])
+      @current_cart = @current_user.shopping_cart
+      @current_cart.delete(@item)
+      @current_user.save!
+      redirect_to edit_cart_path
+    end
+  end
 
   def checkout
     current_user
