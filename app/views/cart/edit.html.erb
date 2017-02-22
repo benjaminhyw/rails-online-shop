@@ -14,6 +14,7 @@
         <%end%>
 <!-- This part down below is under construction!  Will come back to it. -->
         <%= item.id %>
+        <%= button_to "Remove", :item_id => item.id, method: 'remove_from_cart' %>
 <!--  Construction part over .-->
       </div>
     <% end %>
