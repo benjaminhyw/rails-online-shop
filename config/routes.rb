@@ -17,10 +17,10 @@ Rails.application.routes.draw do
   get '/users/:id/cart/edit', to: 'cart#edit', as: 'edit_cart'
   post '/users/:id/cart/edit', to: 'cart#remove_from_cart', as: 'remove_from_cart'
 
-  get '/users/:id/orders', to: 'orders#index', as: 'orders'
+  get '/users/:user_id/orders', to: 'orders#index', as: 'orders'
   get '/users/:id/orders/new', to: 'orders#new', as: 'new_order'
   post '/users/:id/orders', to: 'orders#create'
-  get '/users/:id/orders/:id', to: 'orders#show', as: 'order'
+  get '/users/:user_id/orders/:id', to: 'orders#show', as: 'order'
   get '/users/:id//orders/:id/edit', to: 'orders#edit', as: 'edit_order'
   patch '/users/:id/orders/:id', to: 'orders#update'
   delete '/users/:id/orders/:id', to: 'orders#destroy'
