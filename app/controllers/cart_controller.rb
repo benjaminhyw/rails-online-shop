@@ -26,7 +26,7 @@ class CartController < ApplicationController
       @order.user_id = @current_user.id
 
       @current_user.shopping_cart.each do |item|
-        @order.item_id << item
+        @order.items << item
       end
 
       @order.save!

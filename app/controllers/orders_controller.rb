@@ -34,7 +34,7 @@ class OrdersController < ApplicationController
     else
       current_user
       @user = @current_user
-      @items = @order.item_id
+      @items = @order.items
     end
   end
 
