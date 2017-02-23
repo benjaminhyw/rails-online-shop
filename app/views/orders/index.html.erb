@@ -4,7 +4,7 @@
     <% current_user %>
     <% if  !current_user.orders.blank? %>
       <% current_user.orders.each do |order| %>
-        <p><div><%= link_to order.created_at.strftime("%m/%d/%Y at %I:%M%p"), order_path(order) %></div></p>
+        <p><div><%= link_to order.created_at.strftime("%m/%d/%Y at %I:%M%p"), order_path(user_id: @user.id, id: order.id)  %></div></p>
       <% end %>
     <% end %>
   </div>
