@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
   def index
+    current_user
+    @user = current_user
     @orders = Order.all
     refresh_cart
   end
