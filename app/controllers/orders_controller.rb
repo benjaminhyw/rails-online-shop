@@ -30,7 +30,11 @@ class OrdersController < ApplicationController
   def show
     find_order
     if !@order
-      redirect_to order_path
+      redirect_to root_path
+    else
+      current_user
+      @user = @current_user
+      @items = @order.item_id
     end
   end
 
