@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
   def index
+    current_user
+    @user = current_user
     @orders = Order.all
     refresh_cart
   end
@@ -28,7 +30,11 @@ class OrdersController < ApplicationController
   def show
     find_order
     if !@order
-      redirect_to order_path
+      redirect_to root_path
+    else
+      current_user
+      @user = @current_user
+      @items = @order.items
     end
   end
 

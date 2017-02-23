@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20170213233342) do
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
-    t.text     "item_id",    default: "--- []\n"
+    t.text     "items",      default: "--- []\n"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
   end
