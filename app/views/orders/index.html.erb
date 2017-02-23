@@ -6,6 +6,8 @@
       <% current_user.orders.each do |order| %>
         <p><div><%= link_to order.created_at.strftime("%m/%d/%Y at %I:%M%p"), order_path(user_id: @user.id, id: order.id)  %></div></p>
       <% end %>
+    <% else %>
+      You don't have any existing orders!  Go buy stuff!
     <% end %>
   </div>
 </div>
