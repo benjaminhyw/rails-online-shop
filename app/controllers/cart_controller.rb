@@ -27,6 +27,8 @@ class CartController < ApplicationController
 
       @current_user.shopping_cart.each do |item|
         @order.items << item
+        item.quantity = item.quantity - 1
+        item.save!
       end
 
       @order.save!

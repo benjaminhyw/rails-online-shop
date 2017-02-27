@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   has_secure_password validations: false
   # has_many :orders
+  # has_many :items
   serialize :orders
   # has_one :shopping_cart
   serialize :shopping_cart
